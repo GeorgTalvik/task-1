@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    text-transform: uppercase;
+}
+
+.container {
+    display: grid;   
+    color: red;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: 300px 600px 200px 450px;
+    grid-template-areas: 
+    "head head head"
+    "feat1 frat2 feat3"
+    "sign sign sign"
+    "cont cont cont"
+
+}
+
+.container > * {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.header {
+    background-color: burlywood;
+    grid-area: head;
+    
+}
+
+.content {
+    background-color: red;
+    grid-area: cont;
+}
+
+.sign-up {
+    background-color: darkcyan;
+    grid-area: sign;
+}
+
+.feature-one {
+    background-color: lightcoral;
+    grid-area: feat1;
+}
+
+.feature-two {
+    background-color:orange;
+    grid-area: feat2;
+}
+
+.feature-three {
+    background-color: brown;
+    grid-area: feat3;
+}
+
+@media (max-width: 550px){
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "head"
+        "cont"
+        "sign"
+        "feat1"
+        "feat2"
+        "feat3"
+        ;
+        grid-template-rows: 300px 600px 300px 250px 250px 250px ;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
